@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+type: software
+title: "AgentRisk: One risk score per AI agent"
+abstract: >-
+  AgentRisk scores an AI agent deployment on exposure, capability, autonomy
+  and reversibility, ranks a fleet by risk, and names the single mitigation
+  that lowers each score most.
+authors:
+  - family-names: Sadayamuthu
+    given-names: Karthikeyan
+    orcid: "https://orcid.org/0009-0008-3539-6048"
+license: Apache-2.0
+repository-code: "https://github.com/sadayamuthu/agentrisk"
+url: "https://openastra.org"
+keywords:
+  - AI agents
+  - risk scoring
+  - threat modeling
+  - security

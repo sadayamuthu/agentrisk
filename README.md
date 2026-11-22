@@ -1,4 +1,22 @@
-# agentrisk
+<div align="center">
+
+# AgentRisk
+
+<h3>One risk score per AI agent</h3>
+
+[![Status](https://img.shields.io/badge/status-design%20stage-orange?style=flat-square)](ROADMAP.md)
+[![Go 1.26+](https://img.shields.io/badge/go-1.26+-00ADD8?style=flat-square)](https://go.dev/dl/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](LICENSE)
+
+---
+
+[Thesis](THESIS.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+
+</div>
+
+---
+
+## What is AgentRisk?
 
 One risk score per AI agent, so a fleet can be ranked. `agentrisk` scores an
 agent deployment on four factors (how much untrusted input reaches it, how
@@ -10,12 +28,16 @@ what it does can be undone) and explains the score in terms you can act on.
 > [OpenAstra](https://openastra.org) research agenda, area VII: AI Threat
 > Modeling & Risk Assessment.
 
+---
+
 ## The problem
 
 Organizations now run dozens to hundreds of agents. Security teams can't
 review them all with the same depth, and there's no common way to say which
 ones to look at first. Vulnerability management solved the same problem with
 scores like CVSS and EPSS; agents have nothing equivalent.
+
+---
 
 ## The four factors
 
@@ -30,6 +52,8 @@ The score combines them so that one strong mitigation counts: an agent with
 dangerous tools but approval on every sensitive call scores lower than the
 same agent running unattended.
 
+---
+
 ## Example (proposed)
 
 ```console
@@ -43,12 +67,16 @@ docs-summarizer     1.4   medium    none        full      high
 support-agent: biggest single reduction is an approval step on send_payment (8.7 -> 4.9)
 ```
 
+---
+
 ## Planned surfaces
 
 - CLI over a directory of agent configs, reusing [ThreatDiff](https://github.com/sadayamuthu/threatdiff)'s parsers
 - JSON output with a full breakdown, for dashboards and inventories
 - "What-if" mode: the score after a proposed mitigation
 - A published, versioned scoring specification, so other tools can compute the same score
+
+---
 
 ## Design principles
 
@@ -59,18 +87,21 @@ support-agent: biggest single reduction is an approval step on send_payment (8.7
 - **Calibrate in the open.** The scoring model will be checked against
   public incident reports and red-team results, and the method published.
 
+---
+
 ## Non-goals
 
 - Scoring model quality or bias.
 - Replacing a threat model. The score tells you where to look; ThreatDiff
   tells you what you'll find.
 
+---
+
 ## Roadmap
 
-1. Factor definitions and a draft scoring specification
-2. Score from ThreatDiff's capability graph
-3. What-if mode and mitigation suggestions
-4. Calibration study and specification v1
+The plan, from the first working version to 1.0, is in [ROADMAP.md](ROADMAP.md). The reasoning behind the project, and what would make us stop, is in [THESIS.md](THESIS.md).
+
+---
 
 ## Related OpenAstra projects
 
@@ -78,6 +109,32 @@ support-agent: biggest single reduction is an approval step on send_payment (8.7
 - [Rewind](https://github.com/sadayamuthu/rewind): provides the reversibility data
 - [ExposureGate](https://github.com/sadayamuthu/exposuregate): the same "rank by real risk" idea, for dependencies
 
+---
+
+## Contributing
+
+Design feedback, real-world cases and fixes are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to help while the project is at the design stage, and [GOVERNANCE.md](GOVERNANCE.md) for how decisions are made.
+
+---
+
+## Security
+
+Please report vulnerabilities privately through [GitHub security advisories](https://github.com/sadayamuthu/agentrisk/security/advisories/new), not in a public issue. See [SECURITY.md](SECURITY.md) for what to include and what's in scope.
+
+---
+
 ## License
 
-To be decided before the first release.
+[Apache License 2.0](LICENSE)
+
+---
+
+<div align="center">
+
+**AgentRisk: one risk score per AI agent**
+
+AgentRisk is managed by [OpenAstra](https://openastra.org)
+
+[GitHub](https://github.com/sadayamuthu/agentrisk) · [Thesis](THESIS.md) · [Roadmap](ROADMAP.md)
+
+</div>
