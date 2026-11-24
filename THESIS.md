@@ -29,7 +29,7 @@ like CVSS and EPSS; agents have nothing comparable.
 
 Agent fleets are growing faster than security teams, and the inputs for
 scoring now exist: capability graphs (ThreatDiff), reversibility data
-(Rewind), and public incident and red-team reports to calibrate against.
+(AgentRewind), and public incident and red-team reports to calibrate against.
 
 ## What success looks like
 
@@ -55,4 +55,4 @@ where to look, ThreatDiff says what you'll find.
 
 Area VII, AI Threat Modeling & Risk Assessment. Built on
 [ThreatDiff](https://github.com/sadayamuthu/threatdiff)'s graph and
-[Rewind](https://github.com/sadayamuthu/rewind)'s reversibility catalog.
+[AgentRewind](https://github.com/sadayamuthu/agentrewind)'s reversibility catalog.

@@ -106,7 +106,7 @@ The plan, from the first working version to 1.0, is in [ROADMAP.md](ROADMAP.md).
 ## Related OpenAstra projects
 
 - [ThreatDiff](https://github.com/sadayamuthu/threatdiff): the capability graph the score is computed from
-- [Rewind](https://github.com/sadayamuthu/rewind): provides the reversibility data
+- [AgentRewind](https://github.com/sadayamuthu/agentrewind): provides the reversibility data
 - [ExposureGate](https://github.com/sadayamuthu/exposuregate): the same "rank by real risk" idea, for dependencies
 
 ---
